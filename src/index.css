@@ -8,10 +8,18 @@ ul {
     padding-left: 30px;
 }
 
-.board-row:after {
-    clear: both;
-    content: "";
-    display: table;
+.board {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 600px;
+    margin-top: 50px;
+}
+
+.board-row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .status {
@@ -21,20 +29,15 @@ ul {
 .square {
     background: #fff;
     border: 1px solid #999;
-    float: left;
     font-size: 24px;
     font-weight: bold;
     line-height: 34px;
-    height: 34px;
     margin-right: -1px;
     margin-top: -1px;
     padding: 0;
     text-align: center;
-    width: 34px;
-}
-
-.square:focus {
-    outline: none;
+    width: 40px;
+    height: 40px;
 }
 
 .kbd-navigation .square:focus {
@@ -43,11 +46,43 @@ ul {
 
 .game {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-play {
+    display: flex;
     flex-direction: row;
+}
+
+.game-board {
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    height: 600px;
 }
 
 .game-info {
     margin-left: 20px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.listStepBtn {
+    overflow: auto;
+    align-items: flex-start;
+    height: 500px;
+    padding: 5px;
+}
+
+.listStepBtn button {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+ol {
+    list-style-position: inside;
 }
 
 .selected {
@@ -58,16 +93,33 @@ ul {
 .sortButton {
     width: auto;
     height: 30px;
-    padding: 10px;
-    background-color: springgreen;
+    padding: 15px;
+    background-color: #1fa687;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
     margin-left: 20px;
     border: 1px solid;
+    font-weight: bold;
+    color: white;
 }
 
 .winSquare {
     background-color: yellow;
+}
+
+label {
+    font-size: large;
+}
+
+input {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: large;
+}
+
+.submitBtn {
+    margin: auto;
+    display: block;
 }
